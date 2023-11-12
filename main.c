@@ -14,10 +14,10 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    int character;
+    char word[50];
 
-    while ((character = fgetc(fp)) != EOF) {
-        putchar(character);
+    while (fscanf(fp, "%s", word) != EOF) {
+        printf("%s\n", word);
     }
 
     fclose(fp);
